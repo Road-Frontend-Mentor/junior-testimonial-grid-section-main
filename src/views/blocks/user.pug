@@ -1,0 +1,7 @@
+mixin user(pictureUrl, authorName, profession, classModifier="", imgModifier="", extesion=".jpg")
+  header(class=`card__header user ${classModifier}`.trimRight())
+    .user__left
+      img(src="images/"+pictureUrl+extesion, alt=authorName+ "profile picture" class=`user__picture ${imgModifier}`.trimRight())
+    .user__right
+      p.user__author-name=authorName
+      p.user__profession=profession
